@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <virtualType name="Magento\CatalogSearch\Model\ResourceModel\Fulltext\SearchCollectionFactory" type="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">
+        <arguments>
+            <argument name="instanceName" xsi:type="string">Mirasvit\LayeredNavigation\Model\ResourceModel\Fulltext\Collection</argument>
+        </arguments>
+    </virtualType>
+
+    <!-- for display all extra filter options (LiveSearch) -->
+    <preference for="Magento\LiveSearchAdapter\Model\Aggregation\AttributeBucketHandler" type="Mirasvit\LayeredNavigationLiveSearch\Model\Aggregation\AttributeBucketHandler"/>
+
+    <!-- Modify filter query for rating filter -->
+    <type name="Magento\LiveSearchAdapter\Model\QueryArgumentProcessor\FilterQueryArgumentProcessor">
+        <plugin name="Mirasvit_LayeredNavigation::ModifyFilterQuery" type="Mirasvit\LayeredNavigationLiveSearch\Plugin\LiveSearch\ModifyFilterQueryPlugin"/>
+    </type>
+</config>

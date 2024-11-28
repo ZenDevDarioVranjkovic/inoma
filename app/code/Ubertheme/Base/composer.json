@@ -1,0 +1,23 @@
+{
+  "name": "ubertheme/module-base",
+  "description": "UB Base - Magento2 extension",
+  "require": {
+    "php": "~7.4.0||~8.1.0",
+    "magento/framework": ">=100.0.0",
+    "mobiledetect/mobiledetectlib": "^3.74"
+  },
+  "suggest": {},
+  "type": "magento2-module",
+  "version": "1.0.6",
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Ubertheme\\Base\\": ""
+    }
+  }
+}

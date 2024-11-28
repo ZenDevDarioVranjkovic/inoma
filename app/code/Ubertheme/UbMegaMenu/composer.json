@@ -1,0 +1,23 @@
+{
+  "name": "ubertheme/module-ubmegamenu",
+  "description": "[Magento 2] UB Mega Menu Extension",
+  "require": {
+    "php": "~8.1.0||~8.2.0||~8.3.0",
+    "magento/module-catalog": ">=100.0.0",
+    "magento/framework": ">=100.0.0",
+    "ubertheme/module-base": ">=1.0.0"
+  },
+  "type": "magento2-module",
+  "version": "1.2.9",
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Ubertheme\\UbMegaMenu\\": ""
+    }
+  }
+}

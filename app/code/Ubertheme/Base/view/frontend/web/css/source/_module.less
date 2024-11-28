@@ -1,0 +1,158 @@
+/*===========================================
+
+@category  :    Ubertheme
+@package   :    Ubertheme_Base
+@author    :    Ubertheme.com
+@copyright :    Copyright 2009-2021 Ubertheme
+
+==============================================*/
+
+//
+//  Mixins
+//  _____________________________________________
+
+    //
+    //  Transform
+    //  ---------------------------------------------
+
+    .ub-transform (
+        @_value: none
+    ) {
+        -webkit-transform: @_value; //  Use in 8 Safari
+            -ms-transform: @_value; //  Use in 9 IE
+                transform: @_value;
+    }
+
+    //
+    //  Box Shadow
+    //  ---------------------------------------------
+
+    .ub-box-shadow (
+        @_value: none
+    ) {
+        -webkit-box-shadow: @_value; //  Use in 8 Safari
+            -ms-box-shadow: @_value; //  Use in 9 IE
+                box-shadow: @_value;
+    }
+
+    //
+    //  Border Radius
+    //  ---------------------------------------------
+
+    .ub-border-radius (
+        @_value: none
+    ) {
+        -webkit-border-radius: @_value; //  Use in 8 Safari
+            -ms-border-radius: @_value; //  Use in 9 IE
+            border-radius: @_value;
+    }
+
+    //
+    //  Box Sizing
+    //  ---------------------------------------------
+
+    .ub-box-sizing (
+        @_value: none
+    ) {
+        -webkit-box-sizing: @_value; //  Use in 8 Safari
+            -ms-box-sizing: @_value; //  Use in 9 IE
+            box-sizing: @_value;
+    }
+
+    //
+    //  Shine Lines Effects
+    //  ---------------------------------------------
+    @keyframes shine-lines {
+        0% {
+            background-position: 100% 50%;
+        }
+    
+        100% {
+            background-position: 0 50%;
+        }
+    }
+
+
+    //
+    //  Icon Next
+    //  ---------------------------------------------
+    @ub-icon-next: {
+        .lib-icon-font(
+            @_icon-font-content: @icon-next,
+            @_icon-font-color: inherit,
+            @_icon-font-size: @font-size__base * 1.08,
+            @_icon-font-position: after
+        );
+    };
+
+    & when (@media-common =true) {
+        .ub-icon-next {
+            @ub-icon-next();
+        }
+    }
+
+    .media-width(@extremum, @break) when (@extremum ='min') and (@break = @screen__l) {
+        .ub-icon-next-l {
+            @ub-icon-next();
+        }
+    }
+
+    //
+    //  Icon Prev
+    //  ---------------------------------------------
+    @ub-icon-prev: {
+        .lib-icon-font(
+            @_icon-font-content: @icon-prev,
+            @_icon-font-color: inherit,
+            @_icon-font-size: ceil(@font-size__base),
+            @_icon-font-position: before
+        );
+    };
+
+    & when (@media-common =true) {
+        .ub-icon-prev {
+            @ub-icon-prev();
+        }
+    }
+
+    //
+    //  Icon Down
+    //  ---------------------------------------------
+    @ub-icon-down: {
+        .lib-icon-font(
+            @_icon-font-content: @icon-down,
+            @_icon-font-color: inherit,
+            @_icon-font-size: ceil(@font-size__base * 0.71),
+            @_icon-font-position: after
+        );
+    };
+
+    & when (@media-common =true) {
+        .ub-icon-down {
+            @ub-icon-down();
+        }
+    }
+
+    .media-width(@extremum, @break) when (@extremum ='min') and (@break = @screen__l) {
+        .ub-icon-down-l {
+            @ub-icon-down();
+        }
+    }
+
+     //
+    //  Icon Up
+    //  ---------------------------------------------
+    @ub-icon-up: {
+        .lib-icon-font(
+            @_icon-font-content: @icon-up,
+            @_icon-font-color: inherit,
+            @_icon-font-size: ceil(@font-size__base * 0.71),
+            @_icon-font-position: after
+        );
+    };
+
+    & when (@media-common =true) {
+        .ub-icon-up {
+            @ub-icon-up();
+        }
+    }

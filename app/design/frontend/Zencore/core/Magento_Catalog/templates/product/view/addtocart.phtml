@@ -1,0 +1,91 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var $block \Magento\Catalog\Block\Product\View */
+?>
+<?php
+$_product = $block->getProduct();
+$customAttributeValue = $_product->getData('posebnosti');
+$customAttributeLocations = $_product->getData('lokacija');
+?>
+<?php $buttonTitle = __('Dodaj u košaricu '); ?>
+
+
+<?php if ($block->displayProductStockStatus()) :?>
+    <?php if ($_product->isAvailable()) :?>
+        <div class="stock available" title="<?= $block->escapeHtmlAttr(__('Availability')) ?>">
+            <span><?= $block->escapeHtml(__('In stock')) ?>
+            </span>
+
+            <?php if ( !empty($customAttributeLocations) && strlen($customAttributeLocations) > 1 ): ?>
+                    <span class="custom-attribute-locations" style="color: #575757; font-weight: 400;">
+                        <?php echo "(" . $block->escapeHtml($customAttributeLocations) . ")" ; ?>
+                    </span>
+                    <br>
+            <?php endif; ?>
+            
+        </div>
+    <?php else :?>
+        <div class="stock unavailable" title="<?= $block->escapeHtmlAttr(__('Availability')) ?>">
+            <span><?= $block->escapeHtml(__('Proizvod trenutno nije na stanju')) ?></span>
+        </div>
+    <?php endif; ?>
+<?php endif; ?>
+
+<?php if ($customAttributeValue): ?>
+    <!--
+    <div class="custom-attribute-posebnosti">
+         <p><?php echo $block->escapeHtml($customAttributeValue); ?></p>
+    </div>
+    -->
+<?php endif; ?>
+
+<?php if ($_product->isSaleable()) :?>
+    <div class="box-tocart">
+        <div class="fieldset">
+            <?php if ($block->shouldRenderQuantity()) :?>
+<!--                <div class="field qty">-->
+<!--                    <label class="label" for="qty"><span>--><?php //= $block->escapeHtml(__('Qty')) ?><!--</span></label>-->
+<!--                    <div class="control">-->
+<!--                        <input type="number"-->
+<!--                               name="qty"-->
+<!--                               id="qty"-->
+<!--                               min="0"-->
+<!--                               value="--><?php //= $block->getProductDefaultQty() * 1 ?><!--"-->
+<!--                               title="--><?php //= $block->escapeHtmlAttr(__('Qty')) ?><!--"-->
+<!--                               class="input-text qty"-->
+<!--                               data-validate="--><?php //= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?><!--"-->
+<!--                        />-->
+<!--                    </div>-->
+<!--                </div>-->
+            <?php endif; ?>
+
+            <div class="actions">
+                <div data-role="add-to-links" class="actions-secondary">
+                    <a href="#"
+                       class="action towishlist"
+                       data-post='<?= /* @noEscape */ $block->getAddToWishlistParams($_product) ?>'
+                       data-action="add-to-wishlist"><img src="<?= $block->getViewFileUrl('images/heart-black.svg') ?>" alt="Lista želja" title="Lista želja"></a>
+                </div>
+                <button type="submit"
+                        title="<?= $block->escapeHtmlAttr($buttonTitle) ?>"
+                        class="action primary tocart"
+                        id="product-addtocart-button" disabled>
+                    <span><?= $block->escapeHtml($buttonTitle) ?></span>
+                </button>
+                <?= $block->getChildHtml('', true) ?>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/js/validate-product": {}
+        }
+    }
+</script>
+

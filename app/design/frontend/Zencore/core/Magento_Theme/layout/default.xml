@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceContainer name="header-wrapper">
+            <container name="custom.group.container" as="customContainer" htmlTag="div" htmlClass="custom-container-header-links" after="minicart">
+                <block class="Magento\Wishlist\Block\Link" name="wishlist_link" before="-" template="Magento_Wishlist::link.phtml"/>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="header.container">
+            <container name="header.top.region" htmlTag="div" htmlClass="header-top-region" before="-">
+                <block class="Magento\Cms\Block\Block" name="header-top-block-message">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">header_top_block_message</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="header-top-block-links">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">header_top_block_links</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+
+
+        
+
+        <referenceContainer name="footer">
+            <container name="footer.row.0" htmlTag="div" htmlClass="row-inner row-inner-0" before="-">
+                <block class="Magento\Cms\Block\Block" name="footer-row-0-block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer_row_0</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="footer-row-1-block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer_row_1</argument>
+                    </arguments>
+                </block>
+            </container>
+
+        </referenceContainer>
+        
+
+        <!-- removing newsletter from the footer  -->
+        <referenceBlock name="form.subscribe" remove="true" />
+
+        <!-- removing copyright  -->
+        <referenceBlock name="footer-bottom-wrap" remove="true" />
+         <referenceBlock name="copyright" remove="true"/>
+
+        <!-- removing footer links  -->
+        <referenceBlock name="footer_links" remove="true" />
+
+        <!-- My account to minicart region
+         <move element="header.links" destination="header-wrapper" after="minicart" />
+        -->
+
+        <!-- Move the wishlist block into the new container -->
+        <move element="wishlist_link" destination="custom.group.container" />
+
+        <!-- Move the login block into the new container -->
+        <move element="header.links" destination="custom.group.container" />
+
+        <!--<referenceBlock  name="register-link" remove="true"/>-->
+        <referenceBlock  name="register-link" remove="true"/>
+
+         <referenceBlock name="sale.reorder.sidebar" remove="true"/>
+
+
+        <referenceBlock name="catalog.compare.link" remove="true" />
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="catalogsearch.product.addto.compare" remove="true"/>
+        <referenceBlock name="category.product.addto.compare" remove="true"/>
+        <referenceBlock name="crosssell.product.addto.compare" remove="true" />
+        <referenceBlock name="related.product.addto.compare" remove="true" />
+        <referenceBlock name="upsell.product.addto.compare" remove="true" />
+        <referenceBlock name="view.addto.compare" remove="true" />
+    
+
+
+    </body>
+</page>

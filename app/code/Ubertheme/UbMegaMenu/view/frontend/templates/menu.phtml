@@ -1,0 +1,34 @@
+<?= ( isset($menuHtml) ) ? $menuHtml : ''; ?>
+
+<?php
+    /** @var \Ubertheme\Base\Helper\Data $baseHelper */
+    $baseHelper = $this->helper('Ubertheme\Base\Helper\Data');
+    $offCanvasBreakpoint = $baseHelper->getConfigValue("ubmegamenu/general/offcanvas_breakpoint");
+    if ($offCanvasBreakpoint === 'mobile') {
+        $offCanvasBreakpoint = 1023; //enable off-canvas menu in tablet portrait and mobile devices
+    } else {
+        $offCanvasBreakpoint = 'all'; //enable off-canvas menu in all devices
+    }
+
+    $enableSticky = $baseHelper->getConfigValue("ubmegamenu/general/enable_sticky");
+?>
+<script type="text/x-magento-init">
+{
+	"#ub-mega-menu-<?= $config['menu_group_id'] ?>": {
+		"Ubertheme_UbMegaMenu/js/ub-menu": {
+		    "menuPosition": "<?= $config['menu_position'] ?>",
+		    "menuKey": "<?= $config['menu_key'] ?>",
+		    "isMainMenu": "<?= $config['is_main_menu']?>",
+		    "enableSticky": "<?= $enableSticky ?>",
+		    "rootSelector": "#ub-mega-menu-<?= $config['menu_group_id'] ?>",
+            "itemSelector": "li.mega",
+            "offCanvasBreakpoint": "<?= $offCanvasBreakpoint ?>",
+            "menuType" : "<?= $config['menu_type'] ?>",
+            "mobileType" : "<?= $config['mobile_type'] ?>",
+            "drillOptions": {"speed": 300},
+            "extraClass": "<?= $config['addition_class'] ?>"
+		}
+	}
+}
+</script>
+

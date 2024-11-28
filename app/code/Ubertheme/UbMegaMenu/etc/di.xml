@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Ubertheme.com All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Ubertheme\UbMegaMenu\Api\Data\GroupSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+    <preference for="Ubertheme\UbMegaMenu\Api\Data\GroupInterface" type="Ubertheme\UbMegaMenu\Model\Group" />
+    <preference for="Ubertheme\UbMegaMenu\Api\GroupRepositoryInterface" type="Ubertheme\UbMegaMenu\Model\GroupRepository" />
+    <preference for="Ubertheme\UbMegaMenu\Api\Data\ItemSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+    <preference for="Ubertheme\UbMegaMenu\Api\Data\ItemInterface" type="Ubertheme\UbMegaMenu\Model\Item" />
+    <preference for="Ubertheme\UbMegaMenu\Api\ItemRepositoryInterface" type="Ubertheme\UbMegaMenu\Model\ItemRepository" />
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="ubmegamenu_group_listing_data_source" xsi:type="string">Ubertheme\UbMegaMenu\Model\ResourceModel\Group\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Ubertheme\UbMegaMenu\Model\ResourceModel\Group\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">ubmegamenu_group</argument>
+            <argument name="eventPrefix" xsi:type="string">ubmegamenu_group_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">group_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Ubertheme\UbMegaMenu\Model\ResourceModel\Group</argument>
+        </arguments>
+    </type>
+    <virtualType name="UbMegaMenuGridFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\Model\Entity\RepositoryFactory">
+        <arguments>
+            <argument name="entities" xsi:type="array">
+                <item name="Ubertheme\UbMegaMenu\Api\Data\GroupInterface" xsi:type="string">Ubertheme\UbMegaMenu\Api\GroupRepositoryInterface</item>
+                <item name="Ubertheme\UbMegaMenu\Api\Data\ItemInterface" xsi:type="string">Ubertheme\UbMegaMenu\Api\ItemRepositoryInterface</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="GroupGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">Ubertheme\UbMegaMenu\Model\ResourceModel\Group\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">UbMegaMenuGridFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Cms\Controller\Adminhtml\Page\MassDelete">
+        <plugin name="update_menu_item_when_delete_cmspage_massaction" type="Ubertheme\UbMegaMenu\Plugin\Cms\Adminhtml\Page\MassDelete" sortOrder="10"  />
+    </type>
+</config>

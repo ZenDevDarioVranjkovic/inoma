@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 UberTheme. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ubertheme_Base::menu"
+             sortOrder="9999"
+             module="Ubertheme_Base"
+             title="Ubertheme's Extensions"
+             resource="Ubertheme_Base::settings" />
+
+        <add id="Ubertheme_Base::helpcenter"
+             sortOrder="1"
+             title="Help Center" module="Ubertheme_Base"
+             parent="Ubertheme_Base::menu"
+             resource="Ubertheme_Base::settings"
+        />
+            <add id="Ubertheme_Base::docs"
+             sortOrder="1"
+             title="Ubertheme Documentation" module="Ubertheme_Base"
+             parent="Ubertheme_Base::helpcenter"
+             resource="Ubertheme_Base::settings"
+             action="adminhtml/system_config/edit/section/ubertheme_base" />
+            <add id="Ubertheme_Base::support"
+             sortOrder="2"
+             title="Ubertheme Help Center" module="Ubertheme_Base"
+             parent="Ubertheme_Base::helpcenter"
+             resource="Ubertheme_Base::settings"
+             action="adminhtml/system_config/edit/section/ubertheme_base" />
+            <add id="Ubertheme_Base::settings"
+             sortOrder="3"
+             title="Extensions Version" module="Ubertheme_Base"
+             parent="Ubertheme_Base::helpcenter"
+             resource="Ubertheme_Base::settings"
+             action="adminhtml/system_config/edit/section/ubertheme_info" />
+            <add id="Ubertheme_Base::marketplace"
+             sortOrder="4"
+             title="Ubertheme Marketplace" module="Ubertheme_Base"
+             parent="Ubertheme_Base::helpcenter"
+             resource="Ubertheme_Base::settings"
+             action="adminhtml/system_config/edit/section/ubertheme_base" />
+    </menu>
+</config>

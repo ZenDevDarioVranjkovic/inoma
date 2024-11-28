@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Ubertheme.com All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Cache/etc/cache.xsd">
+    <type name="ubmegamenu" translate="label,description" instance="Ubertheme\UbMegaMenu\Model\Cache\Type">
+        <label><![CDATA[UB MegaMenu]]></label>
+        <description><![CDATA[Menu data cache]]></description>
+    </type>
+</config>

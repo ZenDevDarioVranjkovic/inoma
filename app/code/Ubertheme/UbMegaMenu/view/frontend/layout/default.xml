@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+    <!-- Add a top bar  -->
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="ub-top-bar" template="Ubertheme_UbMegaMenu::top-bar.phtml" before="-"/>
+        </referenceContainer>
+        <!-- Add a container for UB sidebar mega menu-->
+        <referenceContainer name="columns">
+            <container name="div.sidebar.mega.menu" htmlTag="div" htmlClass="sidebar sidebar-main" after="main">
+                <container name="ub.sidebar.mega.menu" as="ub_sidebar_mega_menu" htmlTag="div" htmlClass="ub-sidebar-mega-menu" label="UB Sidebar Mega Menu" />
+            </container>
+        </referenceContainer>
+        <!-- Add a container for UB footer mega menu-->
+        <referenceContainer name="footer-container">
+            <container name="div.footer.mega.menu" htmlTag="div" htmlClass="footer content" before="-">
+                <container name="ub.footer.mega.menu" as="ub_footer_mega_menu" htmlTag="div" htmlClass="ub-footer-mega-menu" label="UB Footer Mega Menu" />
+            </container>
+        </referenceContainer>
+        <referenceBlock name="store.menu">
+            <!-- Declare a new menu-->
+            <block class="Ubertheme\UbMegaMenu\Block\Menu"
+                   name="main.ub.mega.menu"
+                   template="Ubertheme_UbMegaMenu::menu.phtml" >
+                <arguments>
+                    <argument name="menu_key" xsi:type="string">main-menu</argument>
+                    <argument name="addition_class" xsi:type="string"></argument>
+                    <!-- You could uncomment below line to apply a custom cache lifetime -->
+                    <!--<argument name="cache_lifetime" xsi:type="string">86400</argument>-->
+                </arguments>
+            </block>
+        </referenceBlock>
+        <!-- Remove te default top menu-->
+        <referenceBlock name="catalog.topnav" remove="true"/>
+    </body>
+</page>

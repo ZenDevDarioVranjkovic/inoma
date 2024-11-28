@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Ubertheme.com All rights reserved.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Ubertheme\UbMegaMenu\Block\Adminhtml\Group\Edit" name="ubmegamenu_group_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Ubertheme\UbMegaMenu\Block\Adminhtml\Group\Edit\Tabs" name="ubmegamenu_group_edit_tabs">
+                <block class="Ubertheme\UbMegaMenu\Block\Adminhtml\Group\Edit\Tab\Main" name="ubmegamenu_group_edit_tab_main"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">ubmegamenu_group_edit_tab_main</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="js">
+            <block class="Magento\Framework\View\Element\Template" template="Ubertheme_UbMegaMenu::group/edit_js.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Ubertheme.com All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ubertheme_UbMegaMenu::ubmegamenu_content"
+             title="Mega Menu"
+             module="Ubertheme_UbMegaMenu"
+             sortOrder="51" parent="Ubertheme_Base::menu"
+             resource="Ubertheme_UbMegaMenu::ubmegamenu_content" />
+        <add id="Ubertheme_UbMegaMenu::group" title="Manage Menu" module="Ubertheme_UbMegaMenu" sortOrder="0"
+             parent="Ubertheme_UbMegaMenu::ubmegamenu_content" action="ubmegamenu/group"
+             resource="Ubertheme_UbMegaMenu::group"/>
+        <add id="Ubertheme_UbMegaMenu::settings" title="Settings" module="Ubertheme_UbMegaMenu" sortOrder="1"
+             parent="Ubertheme_UbMegaMenu::ubmegamenu_content" action="adminhtml/system_config/edit/section/ubmegamenu"
+             resource="Ubertheme_UbMegaMenu::settings"/>
+    </menu>
+</config>

@@ -1,0 +1,29 @@
+<?php
+/** @var \Magento\Catalog\Block\Product\View $block */
+$_product = $block->getProduct();
+$customAttributeVrsta = $_product->getAttributeText('nakit_vrsta');
+?>
+
+<div class="custom-text-nakit">
+    <?php 
+        if ($customAttributeVrsta && strtolower($customAttributeVrsta) == 'prsten'): ?>
+            <?php
+            $cmsBlockIdentifier = 'vodic_velicina_nakit';
+            echo $this->getLayout()
+                      ->createBlock('Magento\Cms\Block\Block')
+                      ->setBlockId($cmsBlockIdentifier)
+                      ->toHtml();
+            ?>
+    <?php endif; ?>
+</div>
+
+<?php if (!strtolower($customAttributeVrsta) == 'prsten'): ?>
+    <style>
+        #tab-label-custom-tab3{
+            display: none;
+        }
+        #custom-tab3{
+            display: none;
+        }
+    </style>
+<?php endif; ?>

@@ -1,0 +1,29 @@
+<?php
+/** @var \Mirasvit\Scroll\Block\Scroll $block */
+
+use Mirasvit\Scroll\Model\Config\Source\ModeSource;
+
+if (!$block->isEnabled()) {
+    return;
+}
+$initConfig = $block->getInitConfig();
+if (!$initConfig) {
+    return;
+}
+?>
+<script type="text/x-magento-init"><?= \Mirasvit\Core\Service\SerializeService::encode($initConfig) ?></script>
+
+<?php if ($block->getMode() !== ModeSource::MODE_BUTTON_DEFAULT): ?>    
+    <style>
+        .pages, .toolbar-amount {
+            display: none !important;
+        }
+    </style>
+<?php endif; ?>
+<noscript>
+    <style>
+        .pages, .toolbar-amount {
+            display: block !important;
+        }
+    </style>
+</noscript>

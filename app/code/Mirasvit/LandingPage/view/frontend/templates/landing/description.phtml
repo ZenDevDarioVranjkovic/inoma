@@ -1,0 +1,20 @@
+
+<?php
+
+// phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
+
+/**
+ * Category view template
+ *
+ * @var $block Mirasvit\LandingPage\Block\Landing\View
+ */
+
+?>
+
+<?php if ($description = $block->getDescription()):?>
+    <div class="category-view container" id="category-view-container">
+        <div class="category-description">
+            <?php /* @noEscape */  echo __($block->filterOutputHtml($description)) ?>
+        </div>
+    </div>
+<?php endif; ?>

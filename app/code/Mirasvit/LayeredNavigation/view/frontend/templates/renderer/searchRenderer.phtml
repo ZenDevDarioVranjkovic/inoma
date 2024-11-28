@@ -1,0 +1,84 @@
+<?php
+declare(strict_types=1);
+
+
+use Mirasvit\LayeredNavigation\Model\Config\ExtraFilterConfigProvider;
+
+/**
+ * @var $block \Mirasvit\LayeredNavigation\Block\Renderer\SearchRenderer
+ * @var $escaper \Magento\Framework\Escaper
+ */
+
+$attributeCode = $block->getAttributeCode();
+?>
+
+<div class="mst-nav__label mst-nav__search" data-mst-nav-filter="search" id="mst-nav__search">
+    <div class="mst-nav__search-field">
+        <label for="mst-nav__search-filter"></label>
+        <input
+            type="text"
+            name="<?= $block->escapeHtmlAttr(ExtraFilterConfigProvider::SEARCH_FILTER_FRONT_PARAM) ?>"
+            placeholder="<?= $block->escapeHtmlAttr($block->getFilter()->getName()) ?>"
+            id="mst-nav__search-filter"
+            autocomplete="off"
+        >
+        <a id="mst-nav__search-apply" href="" class="action search" data-element="filter"></a>
+        <div class="mst-nav__search-suggestion" id="mst-nav__search-suggestion" style="display: none"></div>
+    </div>
+
+    <ol class="items">
+        <?php foreach ($block->getAppliedSearchTerms() as $term): ?>
+        <div class="filter-current">
+            <li data-element="filter" class="mst-nav__state-filter item _checked _highlight">
+                <span class="filter-value"><?= $block->escapeHtml($term['label']) ?></span>
+                <a class="mst-nav__search-term action remove" href="<?= $block->escapeUrl($term['url']) ?>"></a>
+            </li>
+        </div>
+        <?php endforeach; ?>
+    </ol>
+</div>
+
+<style>
+    .sidebar-main .filter-options .filter-options-item:first-child .filter-options-content {
+        display: block!important;
+    }
+
+    .sidebar-main .filter-options .filter-options-item:first-child .filter-options-title {
+        display: none!important;
+    }
+
+    .mst-nav__search-suggestion .filter-options-title {
+        display: block!important;
+    }
+
+    <?php if ($block->isHighlightEnabled()): ?>
+    .mst-nav__search .mst-nav__state-filter {
+        color: <?= /* @noEscape */ $block->getHighlightColor() ?>;
+    }
+    <?php endif; ?>
+
+    <?php if (!$block->isUseFulltext()): ?>
+    #mst-nav__search-apply {
+        display: none;
+    }
+    <?php endif; ?>
+</style>
+
+<script>
+    window.mstSearchFilterFulltext = <?= $block->isUseFulltext() ? 'true' : 'false' ?>;
+    window.mstSearchFilterOptions  = <?= $block->isFilterOptions() ? 'true' : 'false' ?>;
+</script>
+
+<script type="text/x-magento-init"><?= \Mirasvit\Core\Service\SerializeService::encode([
+        '.mst-nav__search' => [
+            'Mirasvit_LayeredNavigation/js/renderer/search-renderer' => [],
+        ],
+    ]) ?>
+</script>
+<script type="text/x-magento-init"><?= \Mirasvit\Core\Service\SerializeService::encode([
+        '[data-mst-nav-filter=' . $attributeCode . ']' => [
+            'Mirasvit_LayeredNavigation/js/renderer/label-renderer' => [],
+        ],
+    ]) ?>
+</script>
+

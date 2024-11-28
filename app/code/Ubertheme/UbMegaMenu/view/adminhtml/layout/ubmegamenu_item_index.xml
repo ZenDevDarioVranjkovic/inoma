@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Ubertheme.com All rights reserved.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Ubertheme_UbMegaMenu::css/styles.css"/>
+        <css src="Ubertheme_UbMegaMenu::css/category-suggesting.css"/>
+        <remove src="jquery/jstree/themes/default/style.css"/>
+        <css src="Ubertheme_UbMegaMenu::js/jquery/jstree/themes/default/style.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Ubertheme\UbMegaMenu\Block\Adminhtml\TreeMenu" template="Ubertheme_UbMegaMenu::item/tree.phtml"/>
+            <block class="Ubertheme\UbMegaMenu\Block\Adminhtml\Item\ImportCategories" name="ub_import_categories_container" template="Ubertheme_UbMegaMenu::item/form.import.categories.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

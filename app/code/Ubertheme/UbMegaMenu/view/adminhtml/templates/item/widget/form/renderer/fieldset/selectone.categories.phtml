@@ -1,0 +1,105 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ */
+// @codingStandardsIgnoreFile
+?>
+<?php
+/* @var $block \Magento\Backend\Block\Widget\Form\Renderer\Fieldset\Element */
+$element = $block->getElement();
+$note = $element->getNote() ? '<div class="note" id="' . $element->getId() . '-note">' . $element->getNote() . '</div>' : '';
+$elementBeforeLabel = $element->getExtType() == 'checkbox admin__control-checkbox' || $element->getExtType() == 'radio admin__control-radio';
+$addOn = ($element->getBeforeElementHtml() || $element->getAfterElementHtml()) && !$element->getNoWrapAsAddon();
+$fieldId = ($element->getHtmlContainerId()) ? ' id="' . $element->getHtmlContainerId() . '"' : '';
+$fieldClass = "admin__field field field-{$element->getId()} {$element->getCssClass()}";
+$fieldClass .= ($elementBeforeLabel) ? ' choice' : '';
+$fieldClass .= ($addOn) ? ' with-addon' : '';
+$fieldClass .= ($element->getRequired()) ? ' required _required' : '';
+$fieldClass .= ($note) ? ' with-note' : '';
+$fieldClass .= (!$element->getLabelHtml()) ? ' no-label' : '';
+
+$fieldAttributes = $fieldId . ' class="' . $fieldClass . '" '
+    . $block->getUiId('form-field', $element->getId())
+    . ($element->getFieldExtraAttributes() ? ' ' . $element->getFieldExtraAttributes() : '');
+?>
+
+<?php if (!$element->getNoDisplay()): ?>
+    <?php if ($element->getType() == 'hidden'): ?>
+        <?= $element->getElementHtml() ?>
+    <?php else: ?>
+        <div<?php /* @escapeNotVerified */ echo $fieldAttributes ?>>
+            <?php if ($elementBeforeLabel): ?>
+                <?= $element->getElementHtml() ?>
+                <?= $element->getLabelHtml() ?>
+                <?php /* @escapeNotVerified */ echo $note ?>
+            <?php else: ?>
+                <?= $element->getLabelHtml() ?>
+                <div class="admin__field-control control">
+                    <?php /* @escapeNotVerified */ echo($addOn) ? '<div class="admin__field">' . $element->getElementHtml() . '</div>' : $element->getElementHtml(); ?>
+                    <?php /* @escapeNotVerified */ echo $note ?>
+                </div>
+            <?php endif; ?>
+            <?php if ($element->getScopeLabel()): ?>
+                <div class="field-service" value-scope="<?php /* @escapeNotVerified */ echo $element->getScopeLabel()?>">
+                </div>
+            <?php endif;?>
+        </div>
+    <?php endif; ?>
+<?php endif; ?>
+
+<!-- Start append custom code: Categories Selector with ajax suggest -->
+<?php
+    //get again menu group_id from session
+    $om = \Magento\Framework\App\ObjectManager::getInstance();
+    $menuGroupId = $om->get('Magento\Backend\Model\Session')->getMenuGroupId();
+    //get menu group
+    $menuGroup = $om->create('Ubertheme\UbMegaMenu\Model\Group');
+    $menuGroup->load($menuGroupId);
+    //get store ids of menu group
+    $stores = $menuGroup->getStores();
+    $storeId = isset($stores[0]) ? $stores[0] : null;
+
+    $jsonEncoder = $om->create('\Magento\Framework\Json\EncoderInterface');
+    $suggestOptions = $jsonEncoder->encode([
+            'source' => $this->getUrl('ubmegamenu/item/ajaxSuggestCategories', ['store_id' => $storeId]),
+            'valueField' => '#item_category_id',
+            'className' => 'category-select',
+            'multiselect' => true,
+            'showAll' => true,
+            'ajaxOptions' => [
+                'error' => ''
+            ]
+        ]
+    );
+?>
+
+<script>
+    require([
+        'jquery',
+        'jquery/ui',
+        'mage/translate',
+        'Ubertheme_UbMegaMenu/js/jquery/jstree/tree-suggest',
+        'domReady!'
+    ], function($) {
+        'use strict';
+        var resetSelector = function () {
+            $('#item_category_id').find('option').each(function () {
+                $('#item_category_id-suggest').treeSuggest('removeOption', null, this);
+            });
+        };
+        $('#item_category_id').before($('<input>', {
+            id: 'item_category_id-suggest',
+            placeholder: $.mage.__('start typing to search category by name...')
+        }));
+        $('#item_category_id-suggest').treeSuggest(<?= $suggestOptions ?>)
+            .on('suggestbeforeselect', function (event, obj) {
+                if (typeof obj.item != 'undefined') {
+                    if (obj.item.is_root) {
+                        return false;
+                    }
+                }
+                resetSelector();
+                $(event.target).treeSuggest('close');
+            });
+    });
+</script>

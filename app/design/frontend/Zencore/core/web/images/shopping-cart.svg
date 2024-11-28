@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.334" height="17.092" viewBox="0 0 17.334 17.092">
+  <g id="shopping-cart" transform="translate(-0.5 -0.5)">
+    <g id="Ellipse_17" data-name="Ellipse 17" transform="translate(6.082 14.777)" fill="none" stroke="#e24497" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+      <circle cx="0.907" cy="0.907" r="0.907" stroke="none"/>
+      <circle cx="0.907" cy="0.907" r="1.407" fill="none"/>
+    </g>
+    <g id="Ellipse_18" data-name="Ellipse 18" transform="translate(13.704 14.777)" fill="none" stroke="#e24497" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+      <circle cx="0.907" cy="0.907" r="0.907" stroke="none"/>
+      <circle cx="0.907" cy="0.907" r="1.407" fill="none"/>
+    </g>
+    <path id="Path_57" data-name="Path 57" d="M1,1H3.97l1.99,9.831a1.481,1.481,0,0,0,1.485,1.182h7.217a1.481,1.481,0,0,0,1.485-1.182l1.188-6.16H4.712" fill="none" stroke="#e24497" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>
