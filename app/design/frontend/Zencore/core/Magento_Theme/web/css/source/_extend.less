@@ -1504,6 +1504,35 @@ body{
     .custom-attribute-posebnosti {
         margin-bottom: 20px;
     }
+
+    .product-info-main{
+        margin-top: @indent__s;
+        .swatch-attribute-label{
+            font-weight: 500;
+        }
+        .swatch-option.text{
+            padding: 6px 16px;
+            background-color: #fff;
+            outline: 1px solid;
+            box-shadow: 0px 0px 0px;
+            //color: @color-font-1;
+            font-weight: 400;
+            &.selected{
+                //border: 1px solid @color-main-1-0;
+                //background-color: @color-main-1-0;
+                color: #fff;
+            }
+        }
+        .swatch-attribute.color{
+            .swatch-option.color{
+                height: 32px;
+                width: 30px;
+                border-radius: 50%;
+                display: initial;
+            }
+        }
+    }
+
     .product-info-price{
         border-bottom: 0px;
         .price-box {
