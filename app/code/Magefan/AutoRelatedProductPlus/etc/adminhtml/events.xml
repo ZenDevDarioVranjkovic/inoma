@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="magefan_arp_rule_save_before">
+        <observer name="magefan_autorelatedproductplus_observer_magefan_arprulesaveafter_magefan_arp_rule_save_before" instance="Magefan\AutoRelatedProductPlus\Observer\Backend\Magefan\ArpRuleSaveBefore"/>
+    </event>
+    <event name="magefan_arp_rule_save_after">
+        <observer name="magefan_autorelatedproductplus_observer_magefan_arprulesaveafter_magefan_arp_rule_save_after" instance="Magefan\AutoRelatedProductPlus\Observer\Backend\Magefan\ArpRuleSaveAfter"/>
+    </event>
+    <event name="magefan_arp_rule_delete_before">
+        <observer name="magefan_autorelatedproductplus_observer_magefan_arprulesaveafter_magefan_arp_rule_delete_before" instance="Magefan\AutoRelatedProductPlus\Observer\Backend\Magefan\ArpRuleDeleteBefore"/>
+    </event>
+    <event name="magefan_arp_rule_load_after">
+        <observer name="magefan_autorelatedproductplus_observer_magefan_arprulesaveafter_magefan_arp_rule_load_after" instance="Magefan\AutoRelatedProductPlus\Observer\Backend\Magefan\ArpRuleAfterLoad"/>
+    </event>
+    <event name="magefan_arp_rule_collection_load_after">
+        <observer name="magefan_autorelatedproductplus_observer_magefan_arprulecollectionloadafter_magefan_arp_rule_collection_load_after" instance="Magefan\AutoRelatedProductPlus\Observer\Backend\Magefan\ArpRuleCollectionAfterLoad"/>
+    </event>
+</config>

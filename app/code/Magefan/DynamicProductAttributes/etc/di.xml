@@ -1,0 +1,27 @@
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magefan\DynamicProductAttributes\Api\AddCustomValidationFiltersInterface" type="Magefan\DynamicProductAttributes\Model\AddCustomValidationFilters"/>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="Magefan_DynamicCategory_ProductAttributeUpdate" xsi:type="object">Magefan\DynamicProductAttributes\Console\Command\ProductAttributeUpdate</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\CatalogRule\Model\Rule\Condition\Combine">
+        <plugin name="add_dynamic_attributes_to_conditions"
+                type="Magefan\DynamicProductAttributes\Plugin\CatalogRule\Model\Rule\Condition\CombinePlugin" sortOrder="10"/>
+    </type>
+
+    <type name="Magefan\DynamicProductAttributes\Console\Command\ProductAttributeUpdate">
+        <arguments>
+            <argument name="updateProductAttributes" xsi:type="object">Magefan\DynamicProductAttributes\Model\UpdateProductAttributes\Proxy</argument>
+        </arguments>
+    </type>
+</config>

@@ -1,0 +1,60 @@
+<?php
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+namespace Magefan\AutoRelatedProductPlus\Controller\Rule;
+
+use Magento\Framework\App\Action\Context;
+use Magefan\AutoRelatedProduct\Model\RuleRepository;
+use \Magento\Framework\App\RequestInterface;
+use Magento\Framework\Exception\LocalizedException;
+
+/**
+ * Class CountViews
+ * @package Magefan\AutoRelatedProductPlus\Controller\Rule
+ */
+class CountViews extends \Magento\Framework\App\Action\Action
+{
+
+    /**
+     * @var RuleRepository
+     */
+    protected $ruleRepository;
+
+    /**
+     * @var RequestInterface
+     */
+    protected $request;
+
+    /**
+     * CountViews constructor.
+     * @param Context $context
+     * @param RuleRepository $ruleRepository
+     * @param RequestInterface $request
+     */
+    public function __construct(
+        Context $context,
+        RuleRepository $ruleRepository,
+        RequestInterface $request
+    ) {
+        parent::__construct($context);
+        $this->ruleRepository = $ruleRepository;
+        $this->request = $request;
+    }
+
+    /**
+     * @return \Magento\Framework\App\ResponseInterface|\Magento\Framework\Controller\ResultInterface|void
+     */
+    public function execute()
+    {
+        try {
+            $rule = $this->ruleRepository->get($this->request->getParam('rule_id'));
+            $count = $rule->getViewCount() + 1;
+            $rule->setViewCount((string)$count);
+            $this->ruleRepository->save($rule);
+        } catch (LocalizedException $e) {
+            $e->getMessage();
+        }
+    }
+}

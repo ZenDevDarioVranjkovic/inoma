@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="magefan_dynamic_product_attributes">
+        <job instance="Magefan\DynamicProductAttributes\Cron\UpdateCron" method="updateRatingAttribute" name="magefan_dynamic_product_attributes_cron_review_and_rating">
+            <config_path>mfdynamicproductattributes/update_schedule/review_and_rating/schedule</config_path>
+        </job>
+        <job instance="Magefan\DynamicProductAttributes\Cron\UpdateCron" method="updateQty" name="magefan_dynamic_product_attributes_cron_quantity">
+            <config_path>mfdynamicproductattributes/update_schedule/quantity/schedule</config_path>
+        </job>
+        <job instance="Magefan\DynamicProductAttributes\Cron\UpdateCron" method="updateIsOnSale" name="magefan_dynamic_product_attributes_cron_is_on_sale">
+            <config_path>mfdynamicproductattributes/update_schedule/is_on_sale/schedule</config_path>
+        </job>
+        <job instance="Magefan\DynamicProductAttributes\Cron\UpdateCron" method="updateIsNew" name="magefan_dynamic_product_attributes_cron_is_new">
+            <config_path>mfdynamicproductattributes/update_schedule/is_new/schedule</config_path>
+        </job>
+        <job instance="Magefan\DynamicProductAttributes\Cron\UpdateCron" method="updateBestSellers" name="magefan_dynamic_product_attributes_cron_best_sellers">
+            <config_path>mfdynamicproductattributes/update_schedule/best_sellers/schedule</config_path>
+        </job>
+    </group>
+</config>

@@ -1,0 +1,49 @@
+<?php
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+declare(strict_types=1);
+
+namespace Magefan\AutoRelatedProductPlus\Cron;
+
+use \Magefan\AutoRelatedProductPlus\Model\ResourceModel\UpdateCrt;
+use  Magefan\AutoRelatedProduct\Api\ConfigInterface as Config;
+
+class UpdateCrtRate
+{
+
+    /**
+     * @var UpdateCrt
+     */
+    protected $CrtUpdater;
+
+    /**
+     * @var Config
+     */
+    protected $config;
+
+    /**
+     * BoughtUpdate constructor.
+     * @param UpdateCrt $CrtUpdater
+     */
+    public function __construct(
+        UpdateCrt $CrtUpdater,
+        Config $config
+    ) {
+        $this->CrtUpdater = $CrtUpdater;
+        $this->config=$config;
+    }
+
+    /**
+     *
+     */
+    public function execute()
+    {
+        if (!$this->config->isEnabled()) {
+            return ;
+        }
+        $this->relatedUpdater->update();
+        $this->CrtUpdater->update();
+    }
+}

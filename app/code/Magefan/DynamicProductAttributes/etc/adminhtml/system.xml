@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="mfdynamicproductattributes" translate="label" sortOrder="10133090491" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Dynamic Product Attributes</label>
+            <tab>magefan</tab>
+            <resource>Magefan_DynamicProductAttributes::mfdynamicproductattributes</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="version" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Magefan\DynamicProductAttributes\Block\Adminhtml\System\Config\Form\Info</frontend_model>
+                </field>
+                <field id="enabled" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Extension</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="msi" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Use MSI</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Select "Yes" if you use Multi Source Inventory (MSI) on your store.</comment>
+                </field>
+            </group>
+            <group id="update_schedule" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Update Schedule</label>
+                <group id="review_and_rating" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Review And Rating</label>
+                    <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="schedule" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0"  canRestore="1">
+                        <label>Schedule</label>
+                        <comment><![CDATA[
+    ┌───────────── minute (0–59)</br>
+    │ ┌───────────── hour (0–23)</br>
+    │ │ ┌───────────── day of the month (1–31)</br>
+    │ │ │ ┌───────────── month (1–12)</br>
+    │ │ │ │ ┌───────────── day of the week (0–6) (Sunday to Saturday;</br>
+    │ │ │ │ │                                   7 is also Sunday on some systems)</br>
+    │ │ │ │ │</br>
+    │ │ │ │ │</br>
+    *&nbsp*&nbsp*&nbsp*&nbsp*</br>
+    ]]></comment>
+
+                    </field>
+
+                </group>
+                <group id="quantity" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Quantity</label>
+                    <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="schedule" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0"  canRestore="1">
+                        <label>Schedule</label>
+                        <comment><![CDATA[
+    ┌───────────── minute (0–59)</br>
+    │ ┌───────────── hour (0–23)</br>
+    │ │ ┌───────────── day of the month (1–31)</br>
+    │ │ │ ┌───────────── month (1–12)</br>
+    │ │ │ │ ┌───────────── day of the week (0–6) (Sunday to Saturday;</br>
+    │ │ │ │ │                                   7 is also Sunday on some systems)</br>
+    │ │ │ │ │</br>
+    │ │ │ │ │</br>
+    &nbsp*&nbsp&nbsp&nbsp*&nbsp&nbsp&nbsp*&nbsp&nbsp&nbsp*&nbsp&nbsp*</br>
+    ]]></comment>
+                    </field>
+
+                </group>
+                <group id="is_on_sale" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Is On Sale</label>
+                    <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="schedule" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0"  canRestore="1">
+                        <label>Schedule</label>
+                        <comment><![CDATA[
+    ┌───────────── minute (0–59)</br>
+    │ ┌───────────── hour (0–23)</br>
+    │ │ ┌───────────── day of the month (1–31)</br>
+    │ │ │ ┌───────────── month (1–12)</br>
+    │ │ │ │ ┌───────────── day of the week (0–6) (Sunday to Saturday;</br>
+    │ │ │ │ │                                   7 is also Sunday on some systems)</br>
+    │ │ │ │ │</br>
+    │ │ │ │ │</br>
+    &nbsp*&nbsp&nbsp&nbsp*&nbsp&nbsp&nbsp*&nbsp&nbsp&nbsp*&nbsp&nbsp*</br>
+    ]]></comment>
+                    </field>
+
+                </group>
+                <group id="is_new" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Is New</label>
+                    <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="schedule" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0"  canRestore="1">
+                        <label>Schedule</label>
+                        <comment><![CDATA[
+    ┌───────────── minute (0–59)</br>
+    │ ┌───────────── hour (0–23)</br>
+    │ │ ┌───────────── day of the month (1–31)</br>
+    │ │ │ ┌───────────── month (1–12)</br>
+    │ │ │ │ ┌───────────── day of the week (0–6) (Sunday to Saturday;</br>
+    │ │ │ │ │                                   7 is also Sunday on some systems)</br>
+    │ │ │ │ │</br>
+    │ │ │ │ │</br>
+    &nbsp*&nbsp&nbsp&nbsp*&nbsp&nbsp&nbsp*&nbsp&nbsp&nbsp*&nbsp&nbsp*</br>
+    ]]></comment>
+                    </field>
+                </group>
+                <group id="best_sellers" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Best Sellers</label>
+                    <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="schedule" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0"  canRestore="1">
+                        <label>Schedule</label>
+                        <comment><![CDATA[
+    ┌───────────── minute (0–59)</br>
+    │ ┌───────────── hour (0–23)</br>
+    │ │ ┌───────────── day of the month (1–31)</br>
+    │ │ │ ┌───────────── month (1–12)</br>
+    │ │ │ │ ┌───────────── day of the week (0–6) (Sunday to Saturday;</br>
+    │ │ │ │ │                                   7 is also Sunday on some systems)</br>
+    │ │ │ │ │</br>
+    │ │ │ │ │</br>
+    &nbsp*&nbsp&nbsp&nbsp*&nbsp&nbsp&nbsp*&nbsp&nbsp&nbsp*&nbsp&nbsp*</br>
+    ]]></comment>
+                    </field>
+
+                </group>
+            </group>
+        </section>
+    </system>
+</config>

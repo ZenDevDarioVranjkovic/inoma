@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="autorp_relatedproducts_block_load_collection_before">
+        <observer name="magefan_autorelatedproductplus_observer_frontend_mfautorpb_relatedproductsblockloadcollectionbefore_mfautorpb_relatedproducts_block_load_collection_before" instance="Magefan\AutoRelatedProductPlus\Observer\Frontend\RelatedproductsBlockLoadCollectionBefore"/>
+    </event>
+</config>

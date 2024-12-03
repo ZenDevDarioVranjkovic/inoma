@@ -23,7 +23,9 @@
         "magento/composer-root-update-plugin": "^2.0.4",
         "magento/product-community-edition": "2.4.7-p3",
         "mobiledetect/mobiledetectlib": "^4.8",
-        "swissup/module-marketplace": "^1.10"
+        "swissup/firecheckout": "^1.33",
+        "swissup/module-marketplace": "^1.10",
+        "wyomind/massproductimport": "11.0.3"
     },
     "autoload": {
         "exclude-from-classmap": [
@@ -75,6 +77,14 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "repositories": {
+        "wyomind": {
+            "type": "composer",
+            "url": "https://amila_mirvic_inoma_ba:pVTcY6IO@repo.wyomind.com"
+        },
+        "swissuplabs": {
+            "type": "composer",
+            "url": "https://ci.swissuplabs.com/api/packages.json"
+        },
         "magento": {
             "type": "composer",
             "url": "https://repo.magento.com/"

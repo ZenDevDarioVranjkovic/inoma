@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mfdynamicproductattributes>
+            <general>
+                <enabled>1</enabled>
+                <msi>0</msi>
+            </general>
+            <update_schedule>
+                <review_and_rating>
+                     <enabled>1</enabled>
+                    <schedule>0 2 * * *</schedule>
+                </review_and_rating>
+                <quantity>
+                     <enabled>1</enabled>
+                    <schedule>5 * * * *</schedule>
+                </quantity>
+                <is_on_sale>
+                     <enabled>1</enabled>
+                    <schedule>5 0 * * *</schedule>
+                </is_on_sale>
+                <is_new>
+                     <enabled>1</enabled>
+                    <schedule>5 0 * * *</schedule>
+                </is_new>
+                <best_sellers>
+                     <enabled>1</enabled>
+                    <schedule>0 1 * * 1</schedule>
+                </best_sellers>
+            </update_schedule>
+        </mfdynamicproductattributes>
+    </default>
+</config>

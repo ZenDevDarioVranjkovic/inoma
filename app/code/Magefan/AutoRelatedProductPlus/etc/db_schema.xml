@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="magefan_autorp_rule" resource="default">
+        <column xsi:type="smallint" name="who_bought_this_also_bought" padding="6" unsigned="false" nullable="false" identity="false" default="0" comment="Who Bought This Also Bought"/>
+        <column xsi:type="smallint" name="who_viewed_this_also_viewed" padding="6" unsigned="false" nullable="false" identity="false" default="0" comment="Who Viewed This Also Viewed"/>
+        <column xsi:type="datetime" name="start_date" on_update="false" nullable="true" comment="Show Block From Date"/>
+        <column xsi:type="datetime" name="finish_date" on_update="false" nullable="true" comment="Show Block To Date"/>
+        <column xsi:type="text" name="same_as_conditions_serialized" nullable="true" comment="Same As Conditons Serialized"/>
+        <column xsi:type="smallint" name="from_one_category_only" padding="6" unsigned="false" nullable="false" identity="false" default="0" comment="From One Category Only"/>
+        <column xsi:type="smallint" name="only_with_higher_price" padding="6" unsigned="false" nullable="false" identity="false" default="0" comment="Only With Higher Price"/>
+        <column xsi:type="smallint" name="only_with_lower_price" padding="6" unsigned="false" nullable="false" identity="false" default="0" comment="Only With Lower Price"/>
+        <column xsi:type="text" name="customer_group_ids" nullable="true" comment="Customer Groups Ids"/>
+        <column xsi:type="text" name="category_ids" nullable="true" comment="Category Id' Where To Display Products"/>
+        <column xsi:type="varchar" name="template" nullable="true" length="255" comment="Template"/>
+    </table>
+    <table name="magefan_autorp_index_also_bought" resource="default" engine="innodb" comment="Also Bought Related Products">
+        <column xsi:type="int" name="product_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Product Id"/>
+        <column xsi:type="text" name="related_products_ids" nullable="false" comment="Related Products Id's"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="product_id"/>
+        </constraint>
+    </table>
+    <table name="magefan_autorp_index_also_viewed" resource="default" engine="innodb" comment="Also Viewed Related Products">
+        <column xsi:type="int" name="product_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Product Id"/>
+        <column xsi:type="text" name="related_products_ids" nullable="false" comment="Related Products Id's"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="product_id"/>
+        </constraint>
+    </table>
+    <table name="magefan_autorp_rule_group" resource="default" engine="innodb" comment="Magefan Automatic Related Products To Store Groups">
+        <column xsi:type="int" name="rule_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Rule ID"/>
+        <column xsi:type="int" name="group_id" padding="10" unsigned="true" nullable="false" identity="false" comment="Group Id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="rule_id"/>
+            <column name="group_id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="MAGEFAN_AUTORP_RULE_GROUP_RULE_ID_MAGEFAN_AUTORP_RULE_ID" table="magefan_autorp_rule_group" column="rule_id" referenceTable="magefan_autorp_rule" referenceColumn="id" onDelete="CASCADE"/>
+        <constraint xsi:type="foreign" referenceId="MAGEFAN_AUTORP_RULE_GROUP_GROUP_ID_CSTR_GROUP_CSTR_GROUP_ID" table="magefan_autorp_rule_group" column="group_id" referenceTable="customer_group" referenceColumn="customer_group_id" onDelete="CASCADE"/>
+        <index referenceId="MAGEFAN_AUTORP_RULE_GROUP_GROUP_ID" indexType="btree">
+            <column name="group_id"/>
+        </index>
+    </table>
+</schema>

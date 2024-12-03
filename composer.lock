@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85fc1b02b5e5b60340ce7635b5e469fe",
+    "content-hash": "7793b66756bc731e89cb2c80f9a4ecc1",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -1790,6 +1790,64 @@
                 "source": "https://github.com/firebase/php-jwt/tree/v6.10.2"
             },
             "time": "2024-11-24T11:22:49+00:00"
+        },
+        {
+            "name": "geoip2/geoip2",
+            "version": "v2.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/GeoIP2-php.git",
+                "reference": "6a41d8fbd6b90052bc34dff3b4252d0f88067b23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/GeoIP2-php/zipball/6a41d8fbd6b90052bc34dff3b4252d0f88067b23",
+                "reference": "6a41d8fbd6b90052bc34dff3b4252d0f88067b23",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "maxmind-db/reader": "~1.8",
+                "maxmind/web-service-common": "~0.8",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "3.*",
+                "phpstan/phpstan": "*",
+                "phpunit/phpunit": "^8.0 || ^9.0",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GeoIp2\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gregory J. Oschwald",
+                    "email": "goschwald@maxmind.com",
+                    "homepage": "https://www.maxmind.com/"
+                }
+            ],
+            "description": "MaxMind GeoIP2 PHP API",
+            "homepage": "https://github.com/maxmind/GeoIP2-php",
+            "keywords": [
+                "IP",
+                "geoip",
+                "geoip2",
+                "geolocation",
+                "maxmind"
+            ],
+            "support": {
+                "issues": "https://github.com/maxmind/GeoIP2-php/issues",
+                "source": "https://github.com/maxmind/GeoIP2-php/tree/v2.13.0"
+            },
+            "time": "2022-08-05T20:32:58+00:00"
         },
         {
             "name": "google/recaptcha",
@@ -4853,6 +4911,83 @@
                 }
             ],
             "time": "2024-09-21T08:32:55+00:00"
+        },
+        {
+            "name": "maennchen/zipstream-php",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maennchen/ZipStream-PHP.git",
+                "reference": "6187e9cc4493da94b9b63eb2315821552015fca9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/6187e9cc4493da94b9b63eb2315821552015fca9",
+                "reference": "6187e9cc4493da94b9b63eb2315821552015fca9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-zlib": "*",
+                "php-64bit": "^8.1"
+            },
+            "require-dev": {
+                "ext-zip": "*",
+                "friendsofphp/php-cs-fixer": "^3.16",
+                "guzzlehttp/guzzle": "^7.5",
+                "mikey179/vfsstream": "^1.6",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpunit": "^10.0",
+                "vimeo/psalm": "^5.0"
+            },
+            "suggest": {
+                "guzzlehttp/psr7": "^2.4",
+                "psr/http-message": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ZipStream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Duncan",
+                    "email": "pabs@pablotron.org"
+                },
+                {
+                    "name": "Jonatan Männchen",
+                    "email": "jonatan@maennchen.ch"
+                },
+                {
+                    "name": "Jesse Donat",
+                    "email": "donatj@gmail.com"
+                },
+                {
+                    "name": "András Kolesár",
+                    "email": "kolesar@kolesar.hu"
+                }
+            ],
+            "description": "ZipStream is a library for dynamically streaming dynamic zip files from PHP without writing to the disk at all on the server.",
+            "keywords": [
+                "stream",
+                "zip"
+            ],
+            "support": {
+                "issues": "https://github.com/maennchen/ZipStream-PHP/issues",
+                "source": "https://github.com/maennchen/ZipStream-PHP/tree/3.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/maennchen",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-10-10T12:33:01+00:00"
         },
         {
             "name": "magento/adobe-stock-integration",
@@ -18585,6 +18720,227 @@
             "time": "2023-08-25T12:52:21+00:00"
         },
         {
+            "name": "markbaker/complex",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MarkBaker/PHPComplex.git",
+                "reference": "95c56caa1cf5c766ad6d65b6344b807c1e8405b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MarkBaker/PHPComplex/zipball/95c56caa1cf5c766ad6d65b6344b807c1e8405b9",
+                "reference": "95c56caa1cf5c766ad6d65b6344b807c1e8405b9",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "dev-master",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
+                "squizlabs/php_codesniffer": "^3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Complex\\": "classes/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Baker",
+                    "email": "mark@lange.demon.co.uk"
+                }
+            ],
+            "description": "PHP Class for working with complex numbers",
+            "homepage": "https://github.com/MarkBaker/PHPComplex",
+            "keywords": [
+                "complex",
+                "mathematics"
+            ],
+            "support": {
+                "issues": "https://github.com/MarkBaker/PHPComplex/issues",
+                "source": "https://github.com/MarkBaker/PHPComplex/tree/3.0.2"
+            },
+            "time": "2022-12-06T16:21:08+00:00"
+        },
+        {
+            "name": "markbaker/matrix",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MarkBaker/PHPMatrix.git",
+                "reference": "728434227fe21be27ff6d86621a1b13107a2562c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MarkBaker/PHPMatrix/zipball/728434227fe21be27ff6d86621a1b13107a2562c",
+                "reference": "728434227fe21be27ff6d86621a1b13107a2562c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "dev-master",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpdocumentor/phpdocumentor": "2.*",
+                "phploc/phploc": "^4.0",
+                "phpmd/phpmd": "2.*",
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
+                "sebastian/phpcpd": "^4.0",
+                "squizlabs/php_codesniffer": "^3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Matrix\\": "classes/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Baker",
+                    "email": "mark@demon-angel.eu"
+                }
+            ],
+            "description": "PHP Class for working with matrices",
+            "homepage": "https://github.com/MarkBaker/PHPMatrix",
+            "keywords": [
+                "mathematics",
+                "matrix",
+                "vector"
+            ],
+            "support": {
+                "issues": "https://github.com/MarkBaker/PHPMatrix/issues",
+                "source": "https://github.com/MarkBaker/PHPMatrix/tree/3.0.1"
+            },
+            "time": "2022-12-02T22:17:43+00:00"
+        },
+        {
+            "name": "maxmind-db/reader",
+            "version": "v1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/MaxMind-DB-Reader-php.git",
+                "reference": "5b2d7a721dedfaef9dc20822c5fe7d26f9f8eb90"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/MaxMind-DB-Reader-php/zipball/5b2d7a721dedfaef9dc20822c5fe7d26f9f8eb90",
+                "reference": "5b2d7a721dedfaef9dc20822c5fe7d26f9f8eb90",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "conflict": {
+                "ext-maxminddb": "<1.11.1 || >=2.0.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "3.*",
+                "phpstan/phpstan": "*",
+                "phpunit/phpunit": ">=8.0.0,<10.0.0",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "suggest": {
+                "ext-bcmath": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
+                "ext-gmp": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
+                "ext-maxminddb": "A C-based database decoder that provides significantly faster lookups"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MaxMind\\Db\\": "src/MaxMind/Db"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gregory J. Oschwald",
+                    "email": "goschwald@maxmind.com",
+                    "homepage": "https://www.maxmind.com/"
+                }
+            ],
+            "description": "MaxMind DB Reader API",
+            "homepage": "https://github.com/maxmind/MaxMind-DB-Reader-php",
+            "keywords": [
+                "database",
+                "geoip",
+                "geoip2",
+                "geolocation",
+                "maxmind"
+            ],
+            "support": {
+                "issues": "https://github.com/maxmind/MaxMind-DB-Reader-php/issues",
+                "source": "https://github.com/maxmind/MaxMind-DB-Reader-php/tree/v1.12.0"
+            },
+            "time": "2024-11-14T22:43:47+00:00"
+        },
+        {
+            "name": "maxmind/web-service-common",
+            "version": "v0.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/web-service-common-php.git",
+                "reference": "d7c7c42fc31bff26e0ded73a6e187bcfb193f9c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/web-service-common-php/zipball/d7c7c42fc31bff26e0ded73a6e187bcfb193f9c4",
+                "reference": "d7c7c42fc31bff26e0ded73a6e187bcfb193f9c4",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0.3",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "3.*",
+                "phpstan/phpstan": "*",
+                "phpunit/phpunit": "^8.0 || ^9.0",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MaxMind\\Exception\\": "src/Exception",
+                    "MaxMind\\WebService\\": "src/WebService"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gregory Oschwald",
+                    "email": "goschwald@maxmind.com"
+                }
+            ],
+            "description": "Internal MaxMind Web Service API",
+            "homepage": "https://github.com/maxmind/web-service-common-php",
+            "support": {
+                "issues": "https://github.com/maxmind/web-service-common-php/issues",
+                "source": "https://github.com/maxmind/web-service-common-php/tree/v0.10.0"
+            },
+            "time": "2024-11-14T23:14:52+00:00"
+        },
+        {
             "name": "mobiledetect/mobiledetectlib",
             "version": "4.8.06",
             "source": {
@@ -19749,6 +20105,111 @@
                 }
             ],
             "time": "2021-03-23T12:46:44+00:00"
+        },
+        {
+            "name": "phpoffice/phpspreadsheet",
+            "version": "1.29.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPOffice/PhpSpreadsheet.git",
+                "reference": "727cb704d5479fe4ddc291497ee471c4ec08f1b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/727cb704d5479fe4ddc291497ee471c4ec08f1b6",
+                "reference": "727cb704d5479fe4ddc291497ee471c4ec08f1b6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-dom": "*",
+                "ext-fileinfo": "*",
+                "ext-gd": "*",
+                "ext-iconv": "*",
+                "ext-libxml": "*",
+                "ext-mbstring": "*",
+                "ext-simplexml": "*",
+                "ext-xml": "*",
+                "ext-xmlreader": "*",
+                "ext-xmlwriter": "*",
+                "ext-zip": "*",
+                "ext-zlib": "*",
+                "ezyang/htmlpurifier": "^4.15",
+                "maennchen/zipstream-php": "^2.1 || ^3.0",
+                "markbaker/complex": "^3.0",
+                "markbaker/matrix": "^3.0",
+                "php": "^7.4 || ^8.0",
+                "psr/http-client": "^1.0",
+                "psr/http-factory": "^1.0",
+                "psr/simple-cache": "^1.0 || ^2.0 || ^3.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "dev-main",
+                "dompdf/dompdf": "^1.0 || ^2.0",
+                "friendsofphp/php-cs-fixer": "^3.2",
+                "mitoteam/jpgraph": "^10.3",
+                "mpdf/mpdf": "^8.1.1",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpstan/phpstan": "^1.1",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^8.5 || ^9.0",
+                "squizlabs/php_codesniffer": "^3.7",
+                "tecnickcom/tcpdf": "^6.5"
+            },
+            "suggest": {
+                "dompdf/dompdf": "Option for rendering PDF with PDF Writer",
+                "ext-intl": "PHP Internationalization Functions",
+                "mitoteam/jpgraph": "Option for rendering charts, or including charts with PDF or HTML Writers",
+                "mpdf/mpdf": "Option for rendering PDF with PDF Writer",
+                "tecnickcom/tcpdf": "Option for rendering PDF with PDF Writer"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpOffice\\PhpSpreadsheet\\": "src/PhpSpreadsheet"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maarten Balliauw",
+                    "homepage": "https://blog.maartenballiauw.be"
+                },
+                {
+                    "name": "Mark Baker",
+                    "homepage": "https://markbakeruk.net"
+                },
+                {
+                    "name": "Franck Lefevre",
+                    "homepage": "https://rootslabs.net"
+                },
+                {
+                    "name": "Erik Tilt"
+                },
+                {
+                    "name": "Adrien Crivelli"
+                }
+            ],
+            "description": "PHPSpreadsheet - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
+            "homepage": "https://github.com/PHPOffice/PhpSpreadsheet",
+            "keywords": [
+                "OpenXML",
+                "excel",
+                "gnumeric",
+                "ods",
+                "php",
+                "spreadsheet",
+                "xls",
+                "xlsx"
+            ],
+            "support": {
+                "issues": "https://github.com/PHPOffice/PhpSpreadsheet/issues",
+                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/1.29.5"
+            },
+            "time": "2024-11-22T05:57:44+00:00"
         },
         {
             "name": "phpseclib/mcrypt_compat",
@@ -21189,6 +21650,768 @@
             "time": "2024-03-30T18:03:49+00:00"
         },
         {
+            "name": "swissup/firecheckout",
+            "version": "1.33.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/firecheckout/download/1.33.4",
+                "reference": "581bd6900d2fb44e2c3e90ef81c4eb1bb899a651",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-address-autocomplete": "^1.7.0",
+                "swissup/module-address-field-manager": "^1.6.18",
+                "swissup/module-address-validation": "^1.0.4",
+                "swissup/module-bot-protection": "^1.0.2",
+                "swissup/module-checkout-cart": "^1.5.9",
+                "swissup/module-checkout-fields": "^1.6.11",
+                "swissup/module-checkout-registration": "^1.2.0",
+                "swissup/module-checkout-success": "^2.0.9",
+                "swissup/module-customer-field-manager": "^1.2.11",
+                "swissup/module-delivery-date": "^1.7.10",
+                "swissup/module-firecheckout": "^1.33.4",
+                "swissup/module-geoip": "^1.5.8",
+                "swissup/module-orderattachment": "^1.5.1",
+                "swissup/module-subscribe-at-checkout": "^1.3.5",
+                "swissup/module-taxvat": "^1.4.8"
+            },
+            "type": "metapackage",
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "All-in-one checkout extensions for Magento2",
+            "support": {
+                "source": "https://github.com/swissup/firecheckout/tree/1.33.4"
+            },
+            "time": "2024-11-18T12:37:53+00:00"
+        },
+        {
+            "name": "swissup/module-address-autocomplete",
+            "version": "1.7.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-address-autocomplete/download/1.7.0",
+                "reference": "da169b4020f2b235ccabcdd58801555d3c9a4c85",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-checkout": "^1.5.2",
+                "swissup/module-codemirror": "^1.1.6"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "docs": "http://docs.swissuplabs.com/m2/extensions/address-autocomplete/",
+                        "changelog": "http://docs.swissuplabs.com/m2/extensions/address-autocomplete/changelog/"
+                    }
+                },
+                "marketplace": {
+                    "gallery": [
+                        "https://docs.swissuplabs.com/images/marketplace/module-address-autocomplete.png"
+                    ],
+                    "links": {
+                        "docs": "https://docs.swissuplabs.com/m2/extensions/address-autocomplete/",
+                        "changelog": "https://docs.swissuplabs.com/m2/extensions/address-autocomplete/changelog/"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\AddressAutocomplete\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Magento 2 module for address autocompleting",
+            "keywords": [
+                "address",
+                "autocomplete",
+                "google"
+            ],
+            "support": {
+                "source": "https://github.com/swissup/module-address-autocomplete/tree/1.7.0",
+                "issues": "https://github.com/swissup/module-address-autocomplete/issues"
+            },
+            "time": "2023-07-10T13:48:38+00:00"
+        },
+        {
+            "name": "swissup/module-address-field-manager",
+            "version": "1.6.18",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-address-field-manager/download/1.6.18",
+                "reference": "68322e590de97528abd42ce33ab898fcccaaf697",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-field-manager": "^1.3.5"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "marketplace": {
+                    "gallery": [
+                        "https://docs.swissuplabs.com/images/marketplace/module-address-field-manager.png"
+                    ],
+                    "links": {
+                        "docs": "https://docs.swissuplabs.com/m2/extensions/address-field-manager/",
+                        "changelog": "https://docs.swissuplabs.com/m2/extensions/address-field-manager/changelog/"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\AddressFieldManager\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Address field manager for Magento 2",
+            "keywords": [
+                "address attributes",
+                "address fields",
+                "attribute manager",
+                "fields manager"
+            ],
+            "support": {
+                "source": "https://github.com/swissup/module-address-field-manager/tree/1.6.18",
+                "issues": "https://github.com/swissup/module-address-field-manager/issues"
+            },
+            "time": "2024-10-11T11:22:33+00:00"
+        },
+        {
+            "name": "swissup/module-address-validation",
+            "version": "1.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-address-validation/download/1.0.4",
+                "reference": "ff79c4a8ffb5e45ef4bcea2e906ed2b2240c2636",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-checkout": "^1.5.2"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "docs": "http://docs.swissuplabs.com/m2/extensions/address-validation/",
+                        "changelog": "http://docs.swissuplabs.com/m2/extensions/address-validation/changelog/"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\AddressValidation\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Shipping address validation and verification at checkout page",
+            "keywords": [
+                "address",
+                "validation"
+            ],
+            "support": {
+                "source": "https://github.com/swissup/module-address-validation/tree/1.0.4",
+                "issues": "https://github.com/swissup/module-address-validation/issues"
+            },
+            "time": "2023-03-06T11:38:18+00:00"
+        },
+        {
+            "name": "swissup/module-bot-protection",
+            "version": "1.0.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-bot-protection/download/1.0.2",
+                "reference": "c529ef9c1c7a1a45b3a73fb5be928475fa7ab343",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-core": "^1.12.20"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\BotProtection\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Magento module to block unwanted requests",
+            "support": {
+                "source": "https://github.com/swissup/module-bot-protection/tree/1.0.2",
+                "issues": "https://github.com/swissup/module-bot-protection/issues"
+            },
+            "time": "2024-10-01T14:00:36+00:00"
+        },
+        {
+            "name": "swissup/module-checkout",
+            "version": "1.5.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-checkout/download/1.5.2",
+                "reference": "cb29a914ec46ba19c0760016550170600b0964fc",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-core": "^1.12.11"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\Checkout\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Dummy checkout module. It's purpose is to add swissup menu and config sections.",
+            "support": {
+                "source": "https://github.com/swissup/module-checkout/tree/1.5.2",
+                "issues": "https://github.com/swissup/module-checkout/issues"
+            },
+            "time": "2022-08-30T13:40:36+00:00"
+        },
+        {
+            "name": "swissup/module-checkout-cart",
+            "version": "1.5.9",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-checkout-cart/download/1.5.9",
+                "reference": "01cbc72d9bfc1fc60fac77a787278bef7f877ba8",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-checkout": "^1.5.2",
+                "swissup/module-rtl": "^1.3.4"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "docs": "http://docs.swissuplabs.com/m2/extensions/checkout-cart/",
+                        "changelog": "http://docs.swissuplabs.com/m2/extensions/checkout-cart/changelog"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\CheckoutCart\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Editable and configurable shopping cart at the checkout page",
+            "keywords": [
+                "checkout cart",
+                "shopping cart"
+            ],
+            "support": {
+                "source": "https://github.com/swissup/module-checkout-cart/tree/1.5.9",
+                "issues": "https://github.com/swissup/module-checkout-cart/issues"
+            },
+            "time": "2023-05-23T09:26:43+00:00"
+        },
+        {
+            "name": "swissup/module-checkout-fields",
+            "version": "1.6.11",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-checkout-fields/download/1.6.11",
+                "reference": "7d7f61ea203493e9cbbe68ccff458bebc124c072",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-checkout": "^1.5.2"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "docs": "http://docs.swissuplabs.com/m2/extensions/checkout-fields/",
+                        "changelog": "http://docs.swissuplabs.com/m2/extensions/checkout-fields/changelog"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\CheckoutFields\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Custom checkout fields",
+            "keywords": [
+                "checkout fields",
+                "checkout questions",
+                "order comment"
+            ],
+            "support": {
+                "source": "https://github.com/swissup/module-checkout-fields/tree/1.6.11",
+                "issues": "https://github.com/swissup/module-checkout-fields/issues"
+            },
+            "time": "2024-03-13T08:03:42+00:00"
+        },
+        {
+            "name": "swissup/module-checkout-registration",
+            "version": "1.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-checkout-registration/download/1.2.0",
+                "reference": "41b24b4957061e938bdfe336b19c652635fa033a",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-checkout": "^1.5.2"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "docs": "https://docs.swissuplabs.com/m2/extensions/checkout-registration/",
+                        "changelog": "https://docs.swissuplabs.com/m2/extensions/checkout-registration/changelog/"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\CheckoutRegistration\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Configurable customer registration at checkout page",
+            "support": {
+                "source": "https://github.com/swissup/module-checkout-registration/tree/1.2.0",
+                "issues": "https://github.com/swissup/module-checkout-registration/issues"
+            },
+            "time": "2024-03-06T14:58:33+00:00"
+        },
+        {
+            "name": "swissup/module-checkout-success",
+            "version": "2.0.9",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-checkout-success/download/2.0.9",
+                "reference": "4a2dd5a2ba13dec0ff06194f5f38d1e01f437276",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-checkout": "^1.5.2",
+                "swissup/module-codemirror": "^1.1.7"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "docs": "http://docs.swissuplabs.com/m2/extensions/checkoutsuccess/",
+                        "changelog": "http://docs.swissuplabs.com/m2/extensions/checkoutsuccess/changelog"
+                    }
+                },
+                "marketplace": {
+                    "gallery": [
+                        "https://docs.swissuplabs.com/images/marketplace/module-checkout-success.png"
+                    ],
+                    "links": {
+                        "docs": "https://docs.swissuplabs.com/m2/extensions/checkout-success/",
+                        "changelog": "https://docs.swissuplabs.com/m2/extensions/checkout-success/changelog/"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\CheckoutSuccess\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Beautiful checkout success page for Magento2",
+            "keywords": [
+                "checkout",
+                "success page"
+            ],
+            "support": {
+                "source": "https://github.com/swissup/module-checkout-success/tree/2.0.9",
+                "issues": "https://github.com/swissup/module-checkout-success/issues"
+            },
+            "time": "2024-03-28T10:06:14+00:00"
+        },
+        {
+            "name": "swissup/module-codemirror",
+            "version": "1.1.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swissup/module-codemirror.git",
+                "reference": "781c153673ec9237355875f858f1ad61991917b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swissup/module-codemirror/zipball/781c153673ec9237355875f858f1ad61991917b0",
+                "reference": "781c153673ec9237355875f858f1ad61991917b0",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\Codemirror\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Versatile text editor implemented in JavaScript for the browser. ",
+            "support": {
+                "issues": "https://github.com/swissup/module-codemirror/issues",
+                "source": "https://github.com/swissup/module-codemirror/tree/1.1.16"
+            },
+            "time": "2023-07-24T11:29:29+00:00"
+        },
+        {
+            "name": "swissup/module-core",
+            "version": "1.12.20",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-core/download/1.12.20",
+                "reference": "1812026d5f0a89ce98277382006371157a01d46f",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\Core\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Swissup core module. It's purpose is to add Swissup menu and config entries",
+            "support": {
+                "source": "https://github.com/swissup/module-core/tree/1.12.20",
+                "issues": "https://github.com/swissup/module-core/issues"
+            },
+            "time": "2024-07-11T13:16:34+00:00"
+        },
+        {
+            "name": "swissup/module-customer-field-manager",
+            "version": "1.2.11",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-customer-field-manager/download/1.2.11",
+                "reference": "e0f7978eea21e9166c0a1c907f9d7ae0b243745d",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-field-manager": "^1.3.4"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "docs": "http://docs.swissuplabs.com/m2/extensions/customer-field-manager/",
+                        "changelog": "http://docs.swissuplabs.com/m2/extensions/customer-field-manager/changelog"
+                    }
+                },
+                "marketplace": {
+                    "gallery": [
+                        "https://docs.swissuplabs.com/images/marketplace/module-customer-field-manager.png"
+                    ],
+                    "links": {
+                        "docs": "https://docs.swissuplabs.com/m2/extensions/customer-field-manager/",
+                        "changelog": "https://docs.swissuplabs.com/m2/extensions/customer-field-manager/changelog/"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\CustomerFieldManager\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Customer Field manager for Magento 2",
+            "keywords": [
+                "attribute manager",
+                "customer attributes",
+                "customer fields",
+                "fields manager"
+            ],
+            "support": {
+                "source": "https://github.com/swissup/module-customer-field-manager/tree/1.2.11",
+                "issues": "https://github.com/swissup/module-customer-field-manager/issues"
+            },
+            "time": "2024-03-28T10:06:15+00:00"
+        },
+        {
+            "name": "swissup/module-delivery-date",
+            "version": "1.7.10",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-delivery-date/download/1.7.10",
+                "reference": "38b733cdae15fad4691837aa95d77d1f7acac8a4",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-checkout": "^1.5.2"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "docs": "http://docs.swissuplabs.com/m2/extensions/delivery-date/",
+                        "changelog": "http://docs.swissuplabs.com/m2/extensions/delivery-date/changelog"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\DeliveryDate\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Choose delivery date directly at the checkout page",
+            "support": {
+                "source": "https://github.com/swissup/module-delivery-date/tree/1.7.10",
+                "issues": "https://github.com/swissup/module-delivery-date/issues"
+            },
+            "time": "2024-03-11T15:40:13+00:00"
+        },
+        {
+            "name": "swissup/module-field-manager",
+            "version": "1.3.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-field-manager/download/1.3.5",
+                "reference": "44c47be640b9eadeff7b0feff2a8e9163c06f0a0",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-core": "^1.12.19"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\FieldManager\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Field manager for Magento 2",
+            "keywords": [
+                "attribute manager",
+                "customer attributes",
+                "customer fields",
+                "fields manager"
+            ],
+            "support": {
+                "source": "https://github.com/swissup/module-field-manager/tree/1.3.5",
+                "issues": "https://github.com/swissup/module-field-manager/issues"
+            },
+            "time": "2024-04-23T14:09:00+00:00"
+        },
+        {
+            "name": "swissup/module-firecheckout",
+            "version": "1.33.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-firecheckout/download/1.33.4",
+                "reference": "08cf8e1e775df0aec492cb79289be42cb566ffd7",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-checkout": "^1.5.2",
+                "swissup/module-codemirror": "^1.1.7",
+                "swissup/module-firecheckout-integrations": "^1.4.8",
+                "swissup/module-rtl": "^1.3.4",
+                "swissup/module-tippyjs": "^6.0.0"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "identity_key": "https://www.firecheckout.net/license/customer/identity/",
+                        "store": "https://www.firecheckout.net/order",
+                        "download": "https://www.firecheckout.net/subscription/customer/products/",
+                        "docs": "http://docs.swissuplabs.com/m2/extensions/firecheckout/",
+                        "changelog": "http://docs.swissuplabs.com/m2/extensions/firecheckout/changelog/"
+                    }
+                },
+                "marketplace": {
+                    "gallery": [
+                        "https://docs.swissuplabs.com/images/marketplace/module-firecheckout.png"
+                    ],
+                    "links": {
+                        "docs": "https://docs.swissuplabs.com/m2/firecheckout/",
+                        "changelog": "https://docs.swissuplabs.com/m2/firecheckout/changelog/"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\Firecheckout\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Onestep checkout extension for Magento2",
+            "keywords": [
+                "checkout",
+                "firecheckout",
+                "onestep checkout"
+            ],
+            "support": {
+                "source": "https://github.com/swissup/module-firecheckout/tree/1.33.4",
+                "issues": "https://github.com/swissup/module-firecheckout/issues"
+            },
+            "time": "2024-11-18T12:35:53+00:00"
+        },
+        {
+            "name": "swissup/module-firecheckout-integrations",
+            "version": "1.4.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-firecheckout-integrations/download/1.4.8",
+                "reference": "ac51f7fdc513b721f8c4eebc0ed4b29e1d7de616",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\FirecheckoutIntegrations\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Code for third-party modules that requires additional logic at firecheckout page",
+            "keywords": [
+                "firecheckout"
+            ],
+            "support": {
+                "source": "https://github.com/swissup/module-firecheckout-integrations/tree/1.4.8",
+                "issues": "https://github.com/swissup/module-firecheckout-integrations/issues"
+            },
+            "time": "2024-05-15T07:27:33+00:00"
+        },
+        {
+            "name": "swissup/module-geoip",
+            "version": "1.5.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-geoip/download/1.5.8",
+                "reference": "535bc1d6c2e13429b2f3d1e0cf3adbbdd85b0bed",
+                "shasum": ""
+            },
+            "require": {
+                "geoip2/geoip2": "~2.0",
+                "swissup/module-checkout": "^1.5.2"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "docs": "http://docs.swissuplabs.com/m2/extensions/geoip/",
+                        "changelog": "http://docs.swissuplabs.com/m2/extensions/geoip/changelog/"
+                    }
+                },
+                "marketplace": {
+                    "gallery": [
+                        "https://docs.swissuplabs.com/images/marketplace/module-geoip.png"
+                    ],
+                    "links": {
+                        "docs": "https://docs.swissuplabs.com/m2/extensions/geoip/",
+                        "changelog": "https://docs.swissuplabs.com/m2/extensions/geoip/changelog/"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\Geoip\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Magento 2 module for geo location detecting by ip",
+            "keywords": [
+                "address detection",
+                "city",
+                "country",
+                "geoip",
+                "postcode"
+            ],
+            "support": {
+                "source": "https://github.com/swissup/module-geoip/tree/1.5.8",
+                "issues": "https://github.com/swissup/module-geoip/issues"
+            },
+            "time": "2024-06-12T08:28:18+00:00"
+        },
+        {
             "name": "swissup/module-marketplace",
             "version": "1.10.4",
             "source": {
@@ -21241,6 +22464,212 @@
                 "source": "https://github.com/swissup/module-marketplace/tree/1.10.4"
             },
             "time": "2024-10-18T11:10:28+00:00"
+        },
+        {
+            "name": "swissup/module-orderattachment",
+            "version": "1.5.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-orderattachment/download/1.5.1",
+                "reference": "fbc19e0b7706394138c452af6f21390048749f5a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0",
+                "swissup/module-checkout": "^1.5.2"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "marketplace": {
+                    "gallery": [
+                        "https://docs.swissuplabs.com/images/marketplace/module-orderattachment.png"
+                    ],
+                    "links": {
+                        "docs": "https://docs.swissuplabs.com/m2/extensions/order-attachments/",
+                        "changelog": "https://docs.swissuplabs.com/m2/extensions/order-attachments/changelog/"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\Orderattachment\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Order Attachment Magento 2 extension",
+            "support": {
+                "source": "https://github.com/swissup/module-orderattachment/tree/1.5.1",
+                "issues": "https://github.com/swissup/module-orderattachment/issues"
+            },
+            "time": "2024-03-06T14:58:31+00:00"
+        },
+        {
+            "name": "swissup/module-rtl",
+            "version": "1.3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swissup/module-rtl.git",
+                "reference": "2219b2b9324d31e8e79c6dc69062ebf630cc3b5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swissup/module-rtl/zipball/2219b2b9324d31e8e79c6dc69062ebf630cc3b5b",
+                "reference": "2219b2b9324d31e8e79c6dc69062ebf630cc3b5b",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\Rtl\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Magento2 RTL detection",
+            "keywords": [
+                "rtl"
+            ],
+            "support": {
+                "issues": "https://github.com/swissup/module-rtl/issues",
+                "source": "https://github.com/swissup/module-rtl/tree/1.3.8"
+            },
+            "time": "2024-11-27T15:17:15+00:00"
+        },
+        {
+            "name": "swissup/module-subscribe-at-checkout",
+            "version": "1.3.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-subscribe-at-checkout/download/1.3.5",
+                "reference": "fd3b487743fda6b70946bb97cd542bf4d2b4396d",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-checkout": "^1.5.1"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "docs": "http://docs.swissuplabs.com/m2/extensions/subscribe-at-checkout/",
+                        "changelog": "http://docs.swissuplabs.com/m2/extensions/subscribe-at-checkout/changelog/"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\SubscribeAtCheckout\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Subscribe to newsletter directly from checkout page",
+            "keywords": [
+                "newsletter",
+                "subscribe",
+                "subscription"
+            ],
+            "support": {
+                "source": "https://github.com/swissup/module-subscribe-at-checkout/tree/1.3.5",
+                "issues": "https://github.com/swissup/module-subscribe-at-checkout/issues"
+            },
+            "time": "2021-08-19T12:04:09+00:00"
+        },
+        {
+            "name": "swissup/module-taxvat",
+            "version": "1.4.9",
+            "dist": {
+                "type": "zip",
+                "url": "https://ci.swissuplabs.com/api/swissup/module-taxvat/download/1.4.9",
+                "reference": "e36313449c2f064c04351ff6b1f69e4e6815ab9a",
+                "shasum": ""
+            },
+            "require": {
+                "swissup/module-checkout": "^1.5.2"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "swissup": {
+                    "links": {
+                        "docs": "http://docs.swissuplabs.com/m2/extensions/taxvat/",
+                        "changelog": "http://docs.swissuplabs.com/m2/extensions/taxvat/changelog"
+                    }
+                },
+                "marketplace": {
+                    "gallery": [
+                        "https://docs.swissuplabs.com/images/marketplace/module-taxvat.png"
+                    ],
+                    "links": {
+                        "docs": "https://docs.swissuplabs.com/m2/extensions/taxvat/",
+                        "changelog": "https://docs.swissuplabs.com/m2/extensions/taxvat/changelog/"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\Taxvat\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Magento 2 Checkout Tax VAT",
+            "support": {
+                "source": "https://github.com/swissup/module-taxvat/tree/1.4.9",
+                "issues": "https://github.com/swissup/module-taxvat/issues"
+            },
+            "time": "2024-11-29T10:31:44+00:00"
+        },
+        {
+            "name": "swissup/module-tippyjs",
+            "version": "6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swissup/module-tippyjs.git",
+                "reference": "eec649880e7ef4ec2f361ca1a4af7ad9a57b3c2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swissup/module-tippyjs/zipball/eec649880e7ef4ec2f361ca1a4af7ad9a57b3c2c",
+                "reference": "eec649880e7ef4ec2f361ca1a4af7ad9a57b3c2c",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Swissup\\Tippyjs\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Highly customizable vanilla JS tooltip/popover library for Magento 2",
+            "support": {
+                "issues": "https://github.com/swissup/module-tippyjs/issues",
+                "source": "https://github.com/swissup/module-tippyjs/tree/6.0.1"
+            },
+            "time": "2021-06-02T12:41:47+00:00"
         },
         {
             "name": "symfony/config",
@@ -24152,6 +25581,85 @@
                 "source": "https://github.com/wikimedia/less.php/tree/v3.2.1"
             },
             "time": "2023-02-03T06:43:41+00:00"
+        },
+        {
+            "name": "wyomind/framework",
+            "version": "7.2.12",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.wyomind.com/wyomind-framework-7.2.12.zip",
+                "reference": ""
+            },
+            "require": {
+                "magento/framework": ">=100.0.0",
+                "php": "~5.5.0|~5.6.0|>=7.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Wyomind\\Framework\\": ""
+                }
+            },
+            "license": [
+                "Commercial License - Copyright 2024  - WYOMIND  - Purchasing any product (Software) from the  wyomind.com web-site means buyer agree to the following statements (see LICENSE.TXT)"
+            ]
+        },
+        {
+            "name": "wyomind/massproductimport",
+            "version": "11.0.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.wyomind.com/wyomind-massproductimport-11.0.3.zip",
+                "reference": ""
+            },
+            "require": {
+                "magento/framework": ">=100.0.0",
+                "php": "~5.5.0|~5.6.0|>=7.0.0",
+                "wyomind/framework": ">=5.0.0",
+                "wyomind/massstockupdate": ">=11.0.0,<=15.0.19"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Wyomind\\MassProductImport\\": ""
+                }
+            },
+            "license": [
+                "Commercial License - Copyright 2024  - WYOMIND  - Purchasing any product (Software) from the  wyomind.com web-site means buyer agree to the following statements (see LICENSE.TXT)"
+            ]
+        },
+        {
+            "name": "wyomind/massstockupdate",
+            "version": "15.0.19",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.wyomind.com/wyomind-massstockupdate-15.0.19.zip",
+                "reference": ""
+            },
+            "require": {
+                "magento/framework": ">=100.0.0",
+                "php": "~5.5.0|~5.6.0|>=7.0.0",
+                "phpoffice/phpspreadsheet": "~1.28",
+                "wyomind/framework": ">=5.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Wyomind\\MassStockUpdate\\": ""
+                }
+            },
+            "license": [
+                "Commercial License - Copyright 2024  - WYOMIND  - Purchasing any product (Software) from the  wyomind.com web-site means buyer agree to the following statements (see LICENSE.TXT)"
+            ]
         }
     ],
     "packages-dev": [

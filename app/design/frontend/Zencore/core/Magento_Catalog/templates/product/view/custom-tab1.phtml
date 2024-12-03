@@ -1,11 +1,11 @@
 <?php
 /** @var \Magento\Catalog\Block\Product\View $block */
 $_product = $block->getProduct();
-$customAttributeValue = $_product->getData('posebnosti');
+$customAttributeValue =  $_product->getShortDescription();
 ?>
 <div class="custom-attribute">
     <?php if ($customAttributeValue): ?>
-        <p><?php echo $block->escapeHtml($customAttributeValue); ?></p>
+        <?php echo $customAttributeValue; ?>
     <?php else: ?>
         <p><?php echo __('Ova infomracija trenutno nije dostupna!'); ?></p>
     <?php endif; ?>

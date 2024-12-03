@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+* Copyright © Magefan (support@magefan.com). All rights reserved.
+* Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+*/
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="Magefan\AutoRelatedProductPlus\Block\Widget\RelatedList" id="magefan_auto_related">
+        <label translate="true">Auto Related Products Block (Plus)</label>
+        <description>Display related products block</description>
+        <parameters>
+            <parameter name="rule_id" xsi:type="select"  required="true" visible="true" source_model="Magefan\AutoRelatedProductPlus\Model\Config\Source\Rules">
+                 <label translate="true">Rule Name</label>
+                <description>Select Rule</description>
+            </parameter>
+            <parameter name="template" xsi:type="text" required="false" visible="true">
+                <label translate="true">Template</label>
+                <description>Default template: Magento_Catalog::product/list/items.phtml. Leave empty to use default.</description>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
+

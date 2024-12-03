@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+ -->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="what_to_display_product">
+        <field name="customer_group_ids" formElement="multiselect">
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+    </fieldset>
+
+    <fieldset name="where_to_display_product">
+        <container name="container_samples">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="label" xsi:type="string"></item>
+                </item>
+            </argument>
+            <htmlContent name="samples">
+                <block class="Magefan\AutoRelatedProductPlus\Block\Adminhtml\Rule\CustomPositionSamples" name="samples"/>
+            </htmlContent>
+        </container>
+    </fieldset>
+
+    <fieldset name="what_to_display">
+        <insertListing name="products_grid">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="autoRender" xsi:type="boolean">true</item>
+                </item>
+            </argument>
+        </insertListing>
+
+        <container name="same_as_conditions">
+            <field name="apply_same_as_condition">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="formElement" xsi:type="string">checkbox</item>
+                        <item name="component" xsi:type="string">Magefan_AutoRelatedProductPlus/js/form/element/apply-same-as-condition</item>
+                        <item name="elementTmpl" xsi:type="string">Magefan_AutoRelatedProductPlus/form/element/apply-same-as-condition</item>
+                    </item>
+                </argument>
+            </field>
+            <htmlContent name="html_content">
+                <block name="same_as_conditions_apply_to"  class="Magefan\AutoRelatedProductPlus\Block\Adminhtml\Rule\Edit\SameAsConditions" />
+            </htmlContent>
+        </container>
+    </fieldset>
+
+    <fieldset name="display_settings">
+        <field name="template">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Template</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>

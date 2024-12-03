@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magefan\AutoRelatedProductPlus\Controller\Adminhtml\Product\Mui\Render">
+        <plugin name="magefan_auto_related_product_plugin_mui_render" type="Magefan\AutoRelatedProductPlus\Plugin\Backend\Magefan\AutoRelatedProductPlus\Controller\Adminhtml\Product\Mui\Render" sortOrder="5" />
+    </type>
+    <type name="Magefan\AutoRelatedProduct\Ui\DataProvider\Rule\Form\RuleDataProvider">
+        <plugin name="magefan_mfautorpb_catalog_rule_model_condition_combine_plugin"
+                type="Magefan\AutoRelatedProductPlus\Plugin\Backend\Magefan\AutoRelatedProduct\Ui\DataProvider\Rule\Form\RuleDataProvider" sortOrder="10"/>
+    </type>
+</config>

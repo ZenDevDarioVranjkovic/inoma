@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magefan\AutoRelatedProduct\Api\RelatedCollectionInterface">
+        <plugin name="magefan_autorelatedproduct_plus_collection_post_plugin"
+                type="Magefan\AutoRelatedProductPlus\Plugin\Magefan\AutoRelatedProduct\Api\RelatedCollection" sortOrder="12" />
+    </type>
+    <type name="Magefan\AutoRelatedProduct\Api\Data\RuleInterface">
+        <plugin name="magefan_autorelatedproduct_plus_collection_post_plugin"
+                type="Magefan\AutoRelatedProductPlus\Plugin\Magefan\AutoRelatedProduct\Api\Rule" sortOrder="10" />
+    </type>
+    <type name="Magento\SalesRule\Model\Rule\Condition\Combine">
+        <plugin name="magefan_mfautorpb_catalog_rule_model_condition_combine_plugin"
+                type="Magefan\AutoRelatedProductPlus\Plugin\Backend\Magento\SalesRule\Model\Rule\Condition\Combine" sortOrder="100"/>
+    </type>
+    <type name="Magento\SalesRule\Model\Rule\Condition\Product\Combine">
+        <plugin name="magefan_autorp_catalog_rule_model_condition_product_plus_combine_plugin"
+                type="Magefan\AutoRelatedProductPlus\Plugin\Backend\Magento\SalesRule\Model\Rule\Condition\Product\Combine" sortOrder="15"/>
+    </type>
+    <type name="Magefan\AutoRelatedProduct\Model\ActionValidator">
+        <plugin name="magefan_autorelatedproduct_plus_model_actionvalidator_plugin"
+                type="Magefan\AutoRelatedProductPlus\Plugin\Magefan\AutoRelatedProduct\Model\Config\ActionValidator"
+        sortOrder="5"/>
+    </type>
+    <virtualType name="Magefan\AutoRelatedProductPlus\Model\Store\Ui\Component\Listing\Column\Store" type="Magento\Store\Ui\Component\Listing\Column\Store">
+        <arguments>
+            <argument name="storeKey" xsi:type="string">store_id</argument>
+        </arguments>
+    </virtualType>
+</config>
