@@ -197,13 +197,16 @@
         </referenceContainer>
 
         <referenceBlock name="product.info.details">
+
+        <!--
             <block class="Magento\Catalog\Block\Product\View" name="custom-tab1" template="Magento_Catalog::product/view/custom-tab1.phtml" group="detailed_info">
                 <arguments>
                     <argument translate="true" name="title" xsi:type="string">Posebnosti</argument>
                     <argument name="sort_order" xsi:type="string">50</argument>
                 </arguments>
             </block>
-
+        -->
+        
             <block class="Magento\Catalog\Block\Product\View" name="custom-tab2" template="Magento_Catalog::product/view/custom-tab2.phtml" group="detailed_info">
                 <arguments>
                     <argument translate="true" name="title" xsi:type="string">Garancija</argument>
