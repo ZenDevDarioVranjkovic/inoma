@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7793b66756bc731e89cb2c80f9a4ecc1",
+    "content-hash": "3ce15bd39de2e1d49cf0574992552658",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -19105,6 +19105,46 @@
                 }
             ],
             "time": "2024-11-12T12:43:37+00:00"
+        },
+        {
+            "name": "monripayments/magento2",
+            "version": "1.4.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/monripayments/magento2/monripayments-magento2-1.4.0.0.zip",
+                "shasum": "d3db4acae800eb3ffd705e6634d1c590901cf7dd"
+            },
+            "require": {
+                "magento/framework": "^101.0||^102.0||^103.0",
+                "magento/module-backend": "^100.2||^101.0||^102.0",
+                "magento/module-checkout": "^100.2",
+                "magento/module-config": "^101.0",
+                "magento/module-payment": "^100.2",
+                "magento/module-quote": "^101.0",
+                "magento/module-sales": "^101.0||^102.0||^103.0",
+                "magento/module-store": "^100.2||^101.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Monri\\Payments\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Favicode eCommerce Agency",
+                    "email": "contact@favicode.net",
+                    "homepage": "https://favicode.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The official Monri Payments Magento 2 module"
         },
         {
             "name": "mtdowling/jmespath.php",
