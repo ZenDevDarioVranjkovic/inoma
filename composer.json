@@ -26,6 +26,7 @@
         "monripayments/magento2": "^1.4",
         "swissup/firecheckout": "^1.33",
         "swissup/module-marketplace": "^1.10",
+        "vct/changeskudynamically": "^2.0",
         "wyomind/massproductimport": "11.0.3"
     },
     "autoload": {

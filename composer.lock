@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ce15bd39de2e1d49cf0574992552658",
+    "content-hash": "ca2f8b421262310f5dffdaef591662c3",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -25186,6 +25186,69 @@
                 "source": "https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port"
             },
             "time": "2018-01-15T15:26:51+00:00"
+        },
+        {
+            "name": "vct/changeskudynamically",
+            "version": "2.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/vct/changeskudynamically/vct-changeskudynamically-2.0.0.0.zip",
+                "shasum": "5ac18243012c8922d7d237c94c58950565438e67"
+            },
+            "require": {
+                "vct/main": "^1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Vct\\ChangeSkuDynamically\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "VCT",
+                    "email": "vct.vendor@gmail.com",
+                    "homepage": "https://vct-vendor.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "VCT Change SKU Dynamically"
+        },
+        {
+            "name": "vct/main",
+            "version": "1.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/vct/main/vct-main-1.0.1.0.zip",
+                "shasum": "447f59d377dc17561b43034e1bfda2da26868467"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Vct\\Main\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "VCT",
+                    "email": "vct.vendor@gmail.com",
+                    "homepage": "https://vct-vendor.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "VCT Shared Package"
         },
         {
             "name": "web-token/jwt-framework",
