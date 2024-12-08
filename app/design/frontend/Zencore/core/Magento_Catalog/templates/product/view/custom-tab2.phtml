@@ -5,6 +5,15 @@ $customAttributeValue = $_product->getData('warranty');
 ?>
 <div class="custom-attribute">
     <?php if ($customAttributeValue): ?>
+        <?php if($customAttributeValue == 438){
+            $blockIdentifier = 'garancija_ostalo';
+            $cmsBlock = $layout->createBlock(\Magento\Cms\Block\Block::class)
+                            ->setBlockId($blockIdentifier)
+                            ->toHtml();
+            echo $cmsBlock;
+        } 
+        ?>
+
         <p><?php echo $customAttributeValue; ?></p>
     <?php else: ?>
         <p><?php echo __('Ova infomracija trenutno nije dostupna!'); ?></p>
