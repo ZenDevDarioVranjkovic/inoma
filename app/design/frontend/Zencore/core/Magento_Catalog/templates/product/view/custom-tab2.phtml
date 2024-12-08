@@ -5,15 +5,28 @@ $customAttributeValue = $_product->getData('warranty');
 ?>
 <div class="custom-attribute">
     <?php if ($customAttributeValue): ?>
-        <?php if($customAttributeValue == 438){
+        <?php 
+        if($customAttributeValue == 438){
             echo $this->getLayout()
                 ->createBlock('Magento\Cms\Block\Block')
                 ->setBlockId('garancija_ostalo')
                 ->toHtml();
         } 
-        ?>
 
-        <p><?php echo $customAttributeValue; ?></p>
+        if($customAttributeValue == 437){
+            echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('garancija_nakit')
+                ->toHtml();
+        } 
+
+        if($customAttributeValue == 436){
+            echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('garancija_satovi')
+                ->toHtml();
+        } 
+        ?>
     <?php else: ?>
         <p><?php echo __('Ova infomracija trenutno nije dostupna!'); ?></p>
     <?php endif; ?>
